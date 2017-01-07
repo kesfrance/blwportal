@@ -21,3 +21,5 @@ ENV/
 #komodo edit file
 *.komodoproject
 
+#python pyc files
+*.pyc
