@@ -1,0 +1,53 @@
+
+.row.content {height: 950px;}
+.well {border:1px solid #c1bdbd;color: #337ab7;}
+
+.sidenav {
+background-color: #1C1B1B;
+height: 100%;
+width:14em;
+margin: 0;
+padding: 0;
+border:0px;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+text-decoration: none;
+background-color:#337ab7; 
+}
+
+.sidenav li a {
+color: #fff;
+}
+
+.activemode {
+background-color: #337ab7;
+color:red;
+}
+.nav-pills>li>a {
+border-radius: 0px;
+border:0px;
+}
+
+@media screen and (max-width: 767px) {
+.row.content {height: auto;} 
+}
+
+body {
+margin: 0;
+padding: 0;
+background-color: #e6e6e6;
+font-family: "chaparral-pro-1","chaparral-pro-2",Volkhov,"Times New Roman",serif;
+font-size: 13px;
+}
+
+#pagetitle {
+  margin-top:2.8em;margin-bottom:15px;border-bottom:1px solid #c1bdbd;margin-top:70px;color: #337ab7;
+}
+
+#responsivenav {
+  margin-bottom:50px;border-radius:0px;padding:5px;
+  }
+  
+#fullscreennav {
+  margin-bottom:0px;border-radius:0px;padding:5px;
+  }

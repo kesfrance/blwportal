@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SAANZPI CELL MINISTRY</title>
+    <link rel="stylesheet" href="/static/css/main.css" rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+</head>
+<body class='authbox'>
+<div id='content'>
+<br><br><br><br>
+
+<div class='container actionbox' style='max-width:400px; min-width: 300px'>
+    
+    {% if registered %}
+        <strong>Sucess you have registered</strong>
+        <a href="/login/">Return to the homepage.</a><br />
+   {% else %}
+   <center>
+    <div class='headbanner'>SAANZPI CELL MINISTRY</div>
+    </center>
+        <form method="POST" class='signupbox' role="form" action="/signup/"  enctype="multipart/form-data">
+             {% csrf_token %}
+            <h4>Sign up: </h4>
+            <input type="name" id="name" name="username"  class="form-control" class='signuptext' placeholder="Username" required><br>
+            <input type="email" id="email" name="email"  class="form-control" class='signuptext' placeholder="Email address" required><br>
+            <input type="password" id="password" name="password"  class="form-control" class='signuptext' placeholder="Password" required><br>
+            <label>Profile picture:</label>
+            <input type='file' id='fileupload' name='picture' ><br>
+            <button type="submit" class="btn loginbtn">Submit</button>
+        </form>
+    {% endif %}
+    </div>
+    </div>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

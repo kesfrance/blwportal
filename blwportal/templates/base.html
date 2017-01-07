@@ -1,0 +1,70 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CELL MINISTRY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src='{% static "js/main.js" %}'></script>
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top visible-xs" id='responsivenav'>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">SAANZPI CELL MINISTRY</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="activemode"><a href="#section1"><span class="glyphicon glyphicon-dashboard">&nbsp;Dashboard</span></a></li>
+        <li ><a href="#section2"> <span class="glyphicon glyphicon-list-alt">&nbsp;Reports</span></a></li>
+        <li><a href="#section3"><span class="glyphicon glyphicon-download">&nbsp;Resources</span></a></li>
+        <li><a href="#section3"><span class="glyphicon glyphicon-edit">&nbsp;Forum</span></a></li>
+        <li><a href="#section3"><span class="glyphicon glyphicon-education">&nbsp;Training</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-inverse hidden-xs" id='fullscreennav' >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><strong>SAANZPI CELL MINISTRY</strong></a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href='{% url "login" %}'><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid" >
+    <div class="row content">
+      <div class="col-sm-3 sidenav hidden-xs">
+        <ul class="nav nav-pills nav-stacked mainmenu">
+          <li class="activemode"><a href="#section1"><span class="glyphicon glyphicon-dashboard">&nbsp;Dashboard</span></a></li>
+          <li ><a href="#section2"> <span class="glyphicon glyphicon-list-alt">&nbsp;Reports</span></a></li>
+          <li><a href="#section3"><span class="glyphicon glyphicon-download">&nbsp;Resources</span></a></li>
+          <li><a href="#section3"><span class="glyphicon glyphicon-edit">&nbsp;Forum</span></a></li>
+          <li><a href="#section3"><span class="glyphicon glyphicon-education">&nbsp;Training</span></a></li>
+        </ul><br>
+      </div>
+      <br>
+      <div class="col-sm-9">
+      {% block content %} {% endblock%}
+      </div>
+   </div>
+    
+</div>
+</body>
+</html>

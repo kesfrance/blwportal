@@ -1,0 +1,23 @@
+# dotenv
+.env
+
+# virtualenv
+.venv/
+venv/
+ENV/
+
+# Spyder project settings
+.spyderproject
+
+# Rope project settings
+.ropeprojectI
+
+#Mac file
+.Dstore
+
+#sqlite
+*.sqlite3
+
+#komodo edit file
+*.komodoproject
+
